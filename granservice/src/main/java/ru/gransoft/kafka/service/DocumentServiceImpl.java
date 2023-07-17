@@ -60,7 +60,7 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     /** {@inheritDoc} */
-    @Transactional(transactionManager = "transactionManager", propagation = Propagation.REQUIRED)
+    @Transactional(transactionManager = "transactionManager", propagation = Propagation.REQUIRED, readOnly = true)
     @Override
     public DocumentDto getHierarchyDocumentById(Long id) {
         DocumentDto dto = getRootDocument(id);
@@ -108,7 +108,7 @@ public class DocumentServiceImpl implements DocumentService {
     /**
      * Выбрал способ запросов детей в новой транзакции.
      */
-    @Transactional(transactionManager = "transactionManager", propagation = Propagation.REQUIRES_NEW)
+    @Transactional(transactionManager = "transactionManager", propagation = Propagation.REQUIRES_NEW, readOnly = true)
     void getDocumentRecursive(Long parentId, DocumentDto dto) {
 //        List<Document> docs = em.createQuery("select d from Document d"
 //                        + " where d.parent.id = :parentId"
