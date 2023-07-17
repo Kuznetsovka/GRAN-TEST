@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.gransoft.kafka</groupId>
-	<artifactId>GRAN</artifactId>
+	<artifactId>GRAN-TEST</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>GRAN</name>
-	<description>GRAN</description>
+	<name>GRAN-TEST</name>
+	<description>GRAN-TEST</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
