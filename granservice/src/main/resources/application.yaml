@@ -1,6 +1,6 @@
 #Порт, на котором будет запущен встроенный томкат
 server:
-  port: 8090
+  port: 8080
   ssl:
     enabled: false
     key-store: classpath:keystore.p12
